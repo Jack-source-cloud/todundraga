@@ -1,7 +1,12 @@
 import { translations } from "../../lib/translations";
 
 export default function Page({ params }: any) {
-  const lang = params?.lang === "mn" ? "mn" : "en";
+  const lang = params?.lang;
+
+  if (lang !== "en" && lang !== "mn") {
+    return <div>Invalid language</div>;
+  }
+
   const t = translations[lang];
 
   return (
