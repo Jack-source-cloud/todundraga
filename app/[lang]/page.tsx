@@ -1,17 +1,20 @@
+// app/[lang]/page.tsx
 import { translations } from "../../lib/translations";
 
-type Lang = "en" | "mn";
-
-export default function Page({ params }: any) {
-  const lang = params?.lang;
-
-  const safeLang: Lang = lang === "mn" ? "mn" : "en";
-
-  const t = translations[safeLang];
+export default function Home({ params }: any) {
+  const lang = params?.lang === "mn" ? "mn" : "en";
+  const t = translations[lang];
 
   return (
-    <main className="p-10 text-center">
-      <h1 className="text-3xl font-bold">{t.title}</h1>
+    <main className="min-h-screen bg-white text-black">
+      <section className="p-20 text-center bg-gray-100">
+        <h1 className="text-5xl font-bold">
+          TodUndraga
+        </h1>
+        <p className="mt-4 text-xl">
+          {t.home}
+        </p>
+      </section>
     </main>
   );
 }

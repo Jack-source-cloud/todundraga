@@ -1,12 +1,17 @@
+// lib/translations.ts
 export const translations = {
   en: {
-    title: "Welcome to TodUndraga",
-    services: "Our services",
-    projects: "Our projects"
+    home: "Home",
+    services: "Services",
+    projects: "Projects",
+    about: "About",
+    contact: "Contact"
   },
   mn: {
-    title: "Тавтай морил",
+    home: "Нүүр",
     services: "Үйлчилгээ",
-    projects: "Төслүүд"
+    projects: "Төслүүд",
+    about: "Бидний тухай",
+    contact: "Холбоо барих"
   }
 };
