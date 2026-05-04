@@ -1,8 +1,12 @@
 export const translations = {
   en: {
-    title: "Welcome"
+    title: "Welcome to TodUndraga",
+    services: "Our services",
+    projects: "Our projects"
   },
   mn: {
-    title: "Тавтай морил"
+    title: "Тавтай морил",
+    services: "Үйлчилгээ",
+    projects: "Төслүүд"
   }
 };
