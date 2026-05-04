@@ -1,13 +1,13 @@
 import { translations } from "../../lib/translations";
 
+type Lang = "en" | "mn";
+
 export default function Page({ params }: any) {
   const lang = params?.lang;
 
-  if (lang !== "en" && lang !== "mn") {
-    return <div>Invalid language</div>;
-  }
+  const safeLang: Lang = lang === "mn" ? "mn" : "en";
 
-  const t = translations[lang];
+  const t = translations[safeLang];
 
   return (
     <main className="p-10 text-center">
