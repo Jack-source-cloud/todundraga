@@ -1,3 +1,4 @@
+import LanguageSwitcher from "../../components/LanguageSwitcher";
 import { translations } from "../../lib/translations";
 
 export default function Layout({ children }: any) {
