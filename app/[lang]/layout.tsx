@@ -1,21 +1,22 @@
-import "../../styles/globals.css";
 import LanguageSwitcher from "../../components/LanguageSwitcher";
 
-export default function Layout({ children }: any) {
+export default function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html>
-      <body>
-        <header className="flex justify-between p-4 bg-black text-white">
-          <div className="font-bold">TodUndraga</div>
-          <LanguageSwitcher />
-        </header>
+    <div>
+      <header className="flex justify-between p-4 bg-black text-white">
+        <div className="font-bold">TodUndraga</div>
+        <LanguageSwitcher />
+      </header>
 
-        {children}
+      {children}
 
-        <footer className="bg-black text-white text-center p-4">
-          © 2026 TodUndraga.mn
-        </footer>
-      </body>
-    </html>
+      <footer className="bg-black text-white text-center p-4">
+        © 2026 TodUndraga.mn
+      </footer>
+    </div>
   );
 }

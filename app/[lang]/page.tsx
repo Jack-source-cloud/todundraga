@@ -1,21 +1,12 @@
-import LanguageSwitcher from "../../components/LanguageSwitcher";
 import { translations } from "../../lib/translations";
 
-export default function Layout({ children }: any) {
+export default function Page({ params }: any) {
+  const lang = params?.lang === "mn" ? "mn" : "en";
+  const t = translations[lang];
+
   return (
-    <html>
-      <body>
-        <header className="flex justify-between p-4 bg-black text-white">
-          <div className="font-bold">TodUndraga</div>
-          <LanguageSwitcher />
-        </header>
-
-        {children}
-
-        <footer className="bg-black text-white text-center p-4">
-          © 2026 TodUndraga.mn
-        </footer>
-      </body>
-    </html>
+    <main className="p-10 text-center">
+      <h1 className="text-3xl font-bold">{t.title}</h1>
+    </main>
   );
 }
