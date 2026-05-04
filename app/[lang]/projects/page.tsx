@@ -1,7 +1,8 @@
 import { translations } from "@/lib/translations";
 
 export default function Home({ params }: any) {
-  const t = translations[params.lang];
+  const lang = params.lang as keyof typeof translations;
+const t = translations[lang];
 
   return (
     <main className="text-center">
