@@ -1,43 +1,27 @@
-// app/admin/login/page.tsx
-"use client";
-
-import { useState } from "react";
-import { supabase } from "@/lib/supabase";
-
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  async function login() {
-    await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-  }
-
+export default function AdminLoginPage() {
   return (
-    <div className="p-10">
-      <h1 className="text-2xl">Admin Login</h1>
+    <main className="min-h-screen flex items-center justify-center">
+      <div className="border p-10 rounded-xl w-full max-w-md">
+        <h1 className="text-3xl font-bold mb-8">Admin Login</h1>
 
-      <input
-        placeholder="Email"
-        className="border p-2 mt-4 block"
-        onChange={(e) => setEmail(e.target.value)}
-      />
+        <form className="space-y-5">
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full border p-4 rounded-md"
+          />
 
-      <input
-        placeholder="Password"
-        type="password"
-        className="border p-2 mt-2 block"
-        onChange={(e) => setPassword(e.target.value)}
-      />
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full border p-4 rounded-md"
+          />
 
-      <button
-        onClick={login}
-        className="bg-black text-white px-4 py-2 mt-4"
-      >
-        Login
-      </button>
-    </div>
-  );
+          <button className="w-full bg-black text-white py-4 rounded-md">
+            Login
+          </button>
+        </form>
+      </div>
+    </main>
+  )
 }

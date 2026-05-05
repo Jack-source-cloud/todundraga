@@ -1,22 +1,19 @@
-import LanguageSwitcher from "../../components/LanguageSwitcher";
+import '../../styles/globals.css'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
-export default function Layout({
+export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <div>
-      <header className="flex justify-between p-4 bg-black text-white">
-        <div className="font-bold">TodUndraga</div>
-        <LanguageSwitcher />
-      </header>
-
-      {children}
-
-      <footer className="bg-black text-white text-center p-4">
-        © 2026 TodUndraga.mn
-      </footer>
-    </div>
-  );
+    <html>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  )
 }

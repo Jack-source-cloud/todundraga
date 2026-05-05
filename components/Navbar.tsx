@@ -1,14 +1,20 @@
-// components/Navbar.tsx
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between p-4 border-b">
-      <div className="font-bold">TodUndraga</div>
-      <div className="flex gap-4">
-        <Link href="/en">EN</Link>
-        <Link href="/mn">MN</Link>
+    <header className="border-b bg-white">
+      <div className="container-custom flex items-center justify-between py-5">
+        <Link href="/en" className="text-2xl font-bold">
+          Tod Undraga
+        </Link>
+
+        <nav className="flex gap-6 text-sm">
+          <Link href="/en/about">About</Link>
+          <Link href="/en/projects">Projects</Link>
+          <Link href="/en/services">Services</Link>
+          <Link href="/en/contact">Contact</Link>
+        </nav>
       </div>
-    </nav>
-  );
+    </header>
+  )
 }
