@@ -1,4 +1,4 @@
-import { translations } from "../../lib/translations";
+import { translations } from "../../../lib/translations";
 
 export default function Page({ params }: any) {
   const lang = params.lang === "mn" ? "mn" : "en";
