@@ -17,24 +17,37 @@ export default function AdminLayout({
   }
 
   return (
-    <div className="min-h-screen flex">
-      <aside className="w-64 bg-zinc-900 text-white p-6">
-        <h1 className="text-xl font-bold mb-8">
-          Admin Panel
+    <div className="flex min-h-screen bg-gray-100">
+      {/* SIDEBAR */}
+      <aside className="w-72 bg-zinc-900 text-white p-6">
+        <h1 className="text-2xl font-bold mb-10">
+          Tod Undraga Admin
         </h1>
 
-        <nav className="space-y-4">
-          <Link href="/admin/projects">Projects</Link>
-
-          <button onClick={logout} className="mt-10 text-red-400">
-            Logout
-          </button>
+        <nav className="space-y-4 text-sm">
+          <Link className="block hover:text-yellow-400" href="/admin/projects">
+            Projects
+          </Link>
         </nav>
+
+        <button
+          onClick={logout}
+          className="mt-10 text-red-400 hover:text-red-300"
+        >
+          Logout
+        </button>
       </aside>
 
-      <main className="flex-1 p-10 bg-gray-50">
-        {children}
-      </main>
+      {/* MAIN */}
+      <div className="flex-1 flex flex-col">
+        {/* TOP BAR */}
+        <header className="h-16 bg-white border-b flex items-center px-6 justify-between">
+          <h2 className="font-semibold">Dashboard</h2>
+        </header>
+
+        {/* CONTENT */}
+        <main className="p-8">{children}</main>
+      </div>
     </div>
   )
 }
