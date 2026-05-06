@@ -34,3 +34,6 @@ export default function ProjectCard({
     </div>
   )
 }
+
+import Link from 'next/link'
+<Link href={`/en/projects/${slug}`}>
