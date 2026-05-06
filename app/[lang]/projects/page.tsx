@@ -30,26 +30,10 @@ export default async function ProjectsPage({
             }
             image={project.image_url}
             location={project.location}
+            slug={project.slug}
           />
         ))}
       </div>
     </main>
   )
 }
-slug={project.slug}
-<ProjectCard
-  key={project.id}
-  title={
-    params.lang === 'mn'
-      ? project.title_mn
-      : project.title_en
-  }
-  description={
-    params.lang === 'mn'
-      ? project.description_mn
-      : project.description_en
-  }
-  image={project.image_url}
-  location={project.location}
-  slug={project.slug}
-/>
