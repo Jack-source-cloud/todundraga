@@ -11,7 +11,7 @@ export async function getProjects() {
     return []
   }
 
-  return data
+  return data || []
 }
 
 export async function getProjectBySlug(slug: string) {
